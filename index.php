@@ -1,7 +1,16 @@
+<?php
+session_start();
+session_destroy();
 
-<table>
+?>
+<form method="POST" action="reverseAkinator.php">
+<input type="text" name="username" value="" />
+  
+    <input type="submit" value="ok" name="btn"/>
+</form>
+<!-- <table>
     <thead><tr><th>Nom</th><th>Prénom</th><th>Age</th></tr></thead>
-    <tbody>
+    <tbody> -->
 <?php
 /*$entier=17;
 $nombreReel=15.5;
@@ -21,7 +30,7 @@ var_dump($tableau);
 
 echo $tableau[5];*/
 //Utilisateur: nom,prenom,age
-$utilisateur1=array("nom"=>"Manglou","prenom"=>"Sebastien","age"=>18);
+/*$utilisateur1=array("nom"=>"Manglou","prenom"=>"Sebastien","age"=>18);
 $utilisateur2=array("nom"=>"Payet","prenom"=>"Yves","age"=>38);
 $utilisateur3=array("nom"=>"Hoareau","prenom"=>"Paul","age"=>58);
 $utilisateur4=array("nom"=>"Robert","prenom"=>"Jacques","age"=>62);
@@ -32,7 +41,7 @@ foreach($utilisateurs as $utilisateur){
                 $utilisateur["prenom"]."</td><td>".$utilisateur["age"]."</td></tr>";
 }
 $tableau=array("item1",5,true);
-var_dump($tableau);
+var_dump($tableau);*/
 
 
 /*for($compteur=0;$compteur<count($tableau);$compteur++){
@@ -44,15 +53,15 @@ var_dump($tableau);
 }*/
 
 ?>
-</tbody>
-</table>
+<!-- </tbody>
+</table> -->
 
 <?php
-var_dump($_GET);
-// var_dump($_POST);*/
-// var_dump($_POST);*/
+// var_dump($_GET);
+// // var_dump($_POST);*/
+// // var_dump($_POST);*/
 
-echo $_POST["username"];
+// echo $_POST["username"];
 
 
 ?>
