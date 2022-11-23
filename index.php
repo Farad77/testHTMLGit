@@ -46,3 +46,13 @@ var_dump($tableau);
 ?>
 </tbody>
 </table>
+
+<?php
+var_dump($_GET);
+// var_dump($_POST);*/
+// var_dump($_POST);*/
+
+echo $_POST["username"];
+
+
+?>
