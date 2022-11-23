@@ -1,6 +1,6 @@
 function coucou(){
    // console.log("Coucou");
-   console.log("Bonjour 👋");
+   console.log("Bonjour 👋 !!");
 }
 function afficheErreurAge(valeurMessage){
     //recuperer ma div alert
