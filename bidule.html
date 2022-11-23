@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+
+</head>
+<body class="text-center">
+    <div class="container !direction !spacing">
+        <div class="row">
+            <div class="col-12 alert alert-primary" role="alert">
+                Liste des utilisateurs
+            </div>
+        </div>
+        <div class="row">
+          
+            <div class="col-12" >
+                <table id="table_id" class="display">
+                    <thead><tr><th>Nom</th><th>Mot de passe</th><th>Date de naissance</th></tr></thead>
+                    <tbody>
+                        <tr><td>Manglou</td><td>Sébastien</td><td>08/09/1982</td></tr>
+                        <tr><td>Hoareau</td><td>Patrick</td><td>08/01/1972</td></tr>
+                        <tr><td>Payet</td><td>Jean Paul</td><td>07/12/1987</td></tr>
+                        <tr><td>Riviere</td><td>François</td><td>18/11/2005</td></tr>
+                        <tr><td>Pax</td><td>Micheline</td><td>08/05/1962</td></tr>
+                                </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+   
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>
+</body>
+</html>
