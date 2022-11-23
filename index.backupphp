@@ -1,0 +1,28 @@
+
+<ul>
+<?php
+/*$entier=17;
+$nombreReel=15.5;
+$nom="Sebastien";
+$booleen=true;
+echo $entier." ".$nombreReel." ".$nom." ".$booleen;
+echo gettype($booleen);
+
+
+$tableau=array("item1",5,true);
+
+var_dump($tableau);
+$tableau[0]="Rien dedans";
+var_dump($tableau);
+$tableau[5]="Rajouter element";
+var_dump($tableau);
+
+echo $tableau[5];*/
+
+for($compteur=0;$compteur<1000;$compteur++){
+    echo "<li>".$compteur."</li>";
+
+}
+
+?>
+</ul>
