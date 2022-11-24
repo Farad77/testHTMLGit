@@ -38,6 +38,7 @@ $scoreFinaux=array();
    
     if(isset($scoreArray[1]))$scoreFinaux[$scoreArray[0]]=$scoreArray[1];
  }
+ //Attention XSS!
  foreach($scoreFinaux as $user=>$score){
    echo "<tr><td>$user</td><td>$score</td></tr>";
  }
