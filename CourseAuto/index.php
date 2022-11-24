@@ -14,6 +14,7 @@
 <?php
 require_once("vehicule.php");
 require_once("voiture.php");
+require_once("utilisateur.php");
 
 $vehicule=new Vehicule("Bleu","BMW",1000);
 //$vehicule->setCouleur("Bleu");
@@ -28,6 +29,32 @@ echo $vehicule;
 $voiture1=new Voiture("Bleu","BMW",1000);
 
 echo $voiture1;
+//Connection à la base
+$db=new PDO("mysql:host=127.0.0.1;dbname=mydatabase","root","");
+
+
+//Recuperation des utilisateurs
+$requeteExtract=$db->query("select * from utilisateur");
+$requeteExtract->setFetchMode(PDO::FETCH_CLASS,Utilisateur::class);
+
+$resultat=$requeteExtract->fetchAll();
+var_dump($resultat);
+
+//Ajout d'un utilisateur
+$utilisateur=new Utilisateur();
+$utilisateur->setId(2);
+$utilisateur->setUsername("Patrick");
+$utilisateur->setScore(99);
+$requeteInsert=$db->prepare("insert into utilisateur (id,username,score) values (?,?,?)");
+//$tab=array($utilisateur->getId(),$utilisateur->getUsername(),$utilisateur->getScore());
+//var_dump((array)$utilisateur);
+$requeteInsert->execute($utilisateur->toArray());
+//$requeteInsert->execute($tab);
+
+
+
+//var_dump($requete);
+
 ?>
 </body>
 </html>
